@@ -7,9 +7,9 @@ import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
   {
-    title: 'Aliah ganda',
+    title: 'Work',
     links: [
-      { title: 'FamilyFund', href: '/work/TESDA' },
+      { title: 'TESDA', href: '/work/TESDA' },
       { title: 'Presentation', href: '/work/Presentation' },
       { title: 'Form', href: '/work/Form' },
       {
