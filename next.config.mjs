@@ -11,13 +11,13 @@ import remarkUnwrapImages from 'remark-unwrap-images'
 import shiki from 'shiki'
 import { unifiedConditional } from 'unified-conditional'
 
-const repo = 'my-new-portfolio'
+// const repo = 'my-new-portfolio'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   // basePath: `/${repo}`,
-  assetPrefix: `/${repo}`,
+  // assetPrefix: `/${repo}`,
 }
 
 function remarkMDXLayout(source, metaName) {
