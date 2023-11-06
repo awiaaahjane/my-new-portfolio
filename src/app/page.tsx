@@ -93,7 +93,7 @@ function AboutMe() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Technical Mastery">
-              I've mastered diverse technical skills, excelling in programming
+              I&apos;ve mastered diverse technical skills, excelling in programming
               languages, development tools, and frameworks. This proficiency
               empowers me to create efficient and scalable code, adapt to
               various project needs, and embrace new technologies when required.
@@ -139,7 +139,7 @@ function Values() {
         title="Comprehensive Programming Skill Set"
       >
         <p>
-          I'm a versatile programmer with expertise in multiple languages, web
+          I&apos;m a versatile programmer with expertise in multiple languages, web
           development, front-end technologies, database management, and strong
           problem-solving skills.
         </p>
@@ -201,8 +201,8 @@ export default async function Home() {
             Discover my amazing Portfolio!
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            I'm a web developer with a flair for creative design and coding
-            expertise. Together, let's transform your ideas into stunning online
+            I&apos;m a web developer with a flair for creative design and coding
+            expertise. Together, let&apos;s transform your ideas into stunning online
             experiences.
           </p>
         </FadeIn>
