@@ -130,9 +130,9 @@ function Values() {
         title="Comprehensive Programming Skill Set"
       >
         <p>
-          I'm a versatile programmer with expertise in multiple languages, web
-          development, front-end technologies, database management, and strong
-          problem-solving skills.
+          I&apos;m a versatile programmer with expertise in multiple languages,
+          web development, front-end technologies, database management, and
+          strong problem-solving skills.
         </p>
       </SectionIntro>
 
@@ -192,9 +192,9 @@ export default async function Home() {
             Discover my amazing Portfolio!
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            I'm a web developer with a flair for creative design and coding
-            expertise. Together, let's transform your ideas into stunning online
-            experiences.
+            I&apos;m a web developer with a flair for creative design and coding
+            expertise. Together, let&apos;s transform your ideas into stunning
+            online experiences.
           </p>
         </FadeIn>
       </Container>
