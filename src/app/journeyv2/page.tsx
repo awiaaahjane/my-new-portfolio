@@ -12,20 +12,20 @@ import { formatDate } from '@/lib/formatDate'
 import { loadArticles } from '@/lib/mdx'
 
 export const metadata: Metadata = {
-  title: 'Blog',
-  description:
-    'Stay up-to-date with the latest industry news as our marketing teams finds new ways to re-purpose old CSS tricks articles.',
+  title: 'My Journey',
+  description: '',
 }
 
-export default async function Blog() {
+export default async function journeyv2() {
   let articles = await loadArticles()
 
   return (
     <>
-      <PageIntro eyebrow="Blog" title="The latest articles and news">
+      <PageIntro eyebrow="My Journey" title="Oh, the Places We’ve Been!">
         <p>
-          Stay up-to-date with the latest industry news as our marketing teams
-          finds new ways to re-purpose old CSS tricks articles.
+          Embarking on an education journey is like setting sail on a sea of
+          knowledge, with curiosity as our compass. Join me as we navigate this
+          adventure of discovery.
         </p>
       </PageIntro>
 
@@ -43,17 +43,18 @@ export default async function Blog() {
                       <dl className="lg:absolute lg:left-0 lg:top-0 lg:w-1/3 lg:px-4">
                         <dt className="sr-only">Published</dt>
                         <dd className="absolute left-0 top-0 text-sm text-neutral-950 lg:static">
-                          <time dateTime={article.date}>
+                          {/* <time dateTime={article.date}>
                             {formatDate(article.date)}
-                          </time>
+                          </time> */}{' '}
+                          {article.date}
                         </dd>
                         <dt className="sr-only">Author</dt>
                         <dd className="mt-6 flex gap-x-4">
-                          <div className="flex-none overflow-hidden rounded-xl bg-neutral-100">
+                          <div className="flex-none overflow-hidden">
                             <Image
                               alt=""
                               {...article.author.image}
-                              className="h-12 w-12 object-cover grayscale"
+                              className="h-12 w-12 object-cover"
                             />
                           </div>
                           <div className="text-sm text-neutral-950">
@@ -67,13 +68,6 @@ export default async function Blog() {
                       <p className="mt-6 max-w-2xl text-base text-neutral-600">
                         {article.description}
                       </p>
-                      <Button
-                        href={article.href}
-                        aria-label={`Read more: ${article.title}`}
-                        className="mt-8"
-                      >
-                        Read more
-                      </Button>
                     </div>
                   </div>
                 </Border>
@@ -82,8 +76,6 @@ export default async function Blog() {
           ))}
         </div>
       </Container>
-
-      <ContactSection />
     </>
   )
 }

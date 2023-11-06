@@ -20,7 +20,11 @@ import logoFormLight from '@/images/clients/Form/logo-light.svg'
 import logoPresentation from '@/images/clients/Presentation/logo-light.svg'
 import imageAliah from '@/images/aliah.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
-
+import { Button } from '@/components/Button'
+import { GridList, GridListItem } from '@/components/GridList'
+import { GridPattern } from '@/components/GridPattern'
+import Blog from './journeyv2/page'
+import Journey from './journey/page'
 function CaseStudies({
   caseStudies,
 }: {
@@ -42,29 +46,14 @@ function CaseStudies({
             <FadeIn key={caseStudy.href} className="flex">
               <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
                 <h3>
-                  <Link href={caseStudy.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
-                    <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
-                      unoptimized
-                    />
-                  </Link>
+                  <span className="absolute inset-0 rounded-3xl" />
+                  <Image
+                    src={caseStudy.logo}
+                    alt={caseStudy.client}
+                    className="h-16 w-16"
+                    unoptimized
+                  />
                 </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                  {/* <time
-                    dateTime={caseStudy.date.split('-')[0]}
-                    className="font-semibold"
-                  >
-                    {caseStudy.date.split('-')[0]}
-                  </time> */}
-                  {caseStudy.date}
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span>Case study</span>
-                </p>
                 <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
                   {caseStudy.title}
                 </p>
@@ -74,6 +63,9 @@ function CaseStudies({
               </article>
             </FadeIn>
           ))}
+          <div className="mt-5 flex items-center gap-x-8 lg:col-span-3 lg:ml-auto">
+            <Button href="/projects">View More</Button>
+          </div>
         </FadeInStagger>
       </Container>
     </>
@@ -132,8 +124,70 @@ function AboutMe() {
   )
 }
 
+function Values() {
+  return (
+    <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
+      <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
+        <GridPattern
+          className="absolute inset-0 h-full w-full fill-neutral-100 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
+          yOffset={-270}
+        />
+      </div>
+
+      <SectionIntro
+        eyebrow="My Skills"
+        title="Comprehensive Programming Skill Set"
+      >
+        <p>
+          I'm a versatile programmer with expertise in multiple languages, web
+          development, front-end technologies, database management, and strong
+          problem-solving skills.
+        </p>
+      </SectionIntro>
+
+      <Container className="mt-24">
+        <GridList>
+          <GridListItem title="Programming Languages">
+            I am skilled in a variety of programming languages, including C,
+            Java, C#, and JavaScript, which allows me to work on diverse
+            software development projects, from low-level system programming to
+            high-level web and mobile applications.
+          </GridListItem>
+          <GridListItem title="Web Development">
+            My expertise in HTML and CSS enables me to create well-structured
+            and visually appealing web pages, while my proficiency in JavaScript
+            allows me to develop interactive and dynamic web applications.
+          </GridListItem>
+          <GridListItem title="Front-End Technologies">
+            I have mastered front-end technologies such as Tailwind CSS and
+            React, enabling me to build responsive and user-friendly user
+            interfaces that enhance the overall user experience.
+          </GridListItem>
+          <GridListItem title="Database Management">
+            With Microsoft Access, I have the skills to design and manage
+            relational databases, create efficient data entry forms, and
+            generate reports, making me capable of handling data-driven
+            applications effectively.
+          </GridListItem>
+          <GridListItem title="Problem-Solving and Algorithmic Thinking">
+            I excel at problem-solving and can devise efficient algorithms and
+            data structures to optimize software performance, ensuring that I
+            can tackle complex technical challenges effectively.
+          </GridListItem>
+          <GridListItem title="Version Control">
+            I am well-versed in version control systems like Git, which allows
+            me to efficiently collaborate on projects, track code changes, and
+            maintain codebase integrity while working in teams or as an
+            individual developer.
+          </GridListItem>
+        </GridList>
+      </Container>
+    </div>
+  )
+}
+
 export const metadata: Metadata = {
-  description: 'Discover my amazing Portfolio!',
+  description: 'My Portfolio| ALI!',
 }
 
 export default async function Home() {
@@ -154,18 +208,17 @@ export default async function Home() {
         </FadeIn>
       </Container>
       <AboutMe />
-
-      <CaseStudies caseStudies={caseStudies} />
-
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Form', logo: logoFormDark }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
+        In the vast landscape of computer science, the quest for knowledge is a
+        journey without end, where every problem solved reveals countless more
+        waiting to be explored.
       </Testimonial>
-
+      <CaseStudies caseStudies={caseStudies} />
+      <Values />
+      <Journey />
       <ContactSection />
     </>
   )

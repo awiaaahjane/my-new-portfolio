@@ -6,8 +6,8 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Studio',
-    default: 'Studio - Discover my amazing Portfolio!',
+    template: '',
+    default: 'My Portfolio| ALI',
   },
 }
 

@@ -32,17 +32,17 @@ export function Offices({
   return (
     <ul role="list" {...props}>
       <li>
-        <Office name="Copenhagen" invert={invert}>
-          1 Carlsberg Gate
+        <Office name="St. Clare College" invert={invert}>
+          Zabarte Rd, Barangay 172
           <br />
-          1260, København, Denmark
+          Northern Caloocan, 1400 Metro Manila
         </Office>
       </li>
       <li>
-        <Office name="Billund" invert={invert}>
-          24 Lego Allé
+        <Office name="Home" invert={invert}>
+          Northern Caloocan
           <br />
-          7190, Billund, Denmark
+          Metro Manila, Philippines
         </Office>
       </li>
     </ul>

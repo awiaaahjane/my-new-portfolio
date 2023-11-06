@@ -18,146 +18,112 @@ import imageDriesVincent from '@/images/team/dries-vincent.jpg'
 import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
 import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
 import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
+import CHS from '@/images/chslogo.jpg'
+import CNES from '@/images/cneslogo.jpg'
+import VMSHS from '@/images/vmshslogo.jpg'
+import SCC from '@/images/st.clarelogo.png'
 import { loadArticles } from '@/lib/mdx'
+import { Button } from '@/components/Button'
 
 function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Our culture"
+        eyebrow=""
         title="Balance your passion with your passion for life."
         invert
       >
         <p>
-          We are a group of like-minded people who share the same core values.
+          Balancing programming and life means managing time, enjoying hobbies,
+          and socializing.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="Time Management" invert>
+            I allocate dedicated work hours for coding, ensuring I meet my
+            project deadlines, but I also reserve time in the evenings for
+            leisure activities, spending time with family, or pursuing hobbies.
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="Hobbies" invert>
+            Alongside my programming projects, I nurture interests like playing
+            and watching movies/seriess. These hobbies provide a creative outlet
+            and help me unwind, striking a balance between work and life.
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="Social Interactions" invert>
+            I make an effort to engage with friends and attend social events
+            regularly, fostering connections outside of the coding world. This
+            social interaction adds a valuable dimension to my life beyond
+            programming.
           </GridListItem>
         </GridList>
+        <div className="mt-6 flex">
+          <Button href="/arts" invert>
+            View More
+          </Button>
+        </div>
       </Container>
     </div>
   )
 }
 
-const team = [
+const journey = [
   {
-    title: 'Leadership',
+    title: 'My Journey',
     people: [
       {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
+        name: 'St. Clare College',
+        role: 'Tertiary',
+        image: { src: SCC },
       },
       {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
+        name: 'Vicente Malapitan Senior High School',
+        role: 'Secondary',
+        image: { src: VMSHS },
       },
       {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
-      },
-    ],
-  },
-  {
-    title: 'Team',
-    people: [
-      {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
+        name: 'Camarin High School',
+        role: 'Middle',
+        image: { src: CHS },
       },
       {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
-      },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
-      {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
-      },
-      {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
+        name: 'Caloocan North Elementary School',
+        role: 'Primary',
+        image: { src: CNES },
       },
     ],
   },
 ]
 
-function Team() {
+function Journey() {
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <div className="space-y-24">
-        {team.map((group) => (
+        {journey.map((group) => (
           <FadeInStagger key={group.title}>
             <Border as={FadeIn} />
             <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
               <FadeIn>
-                <h2 className="font-display text-2xl font-semibold text-neutral-950">
+                <h2 className="font-display text-5xl font-semibold text-neutral-950 ">
                   {group.title}
                 </h2>
               </FadeIn>
-              <div className="lg:col-span-3">
+              <div className="lg:col-span-4">
                 <ul
                   role="list"
-                  className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"
+                  className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8"
                 >
                   {group.people.map((person) => (
                     <li key={person.name}>
                       <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
+                        <div className="group relative overflow-hidden rounded-3xl">
                           <Image
                             alt=""
                             {...person.image}
-                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
+                            className="h-96   object-contain  grayscale transition duration-1000 group-hover:grayscale-0 motion-safe:group-hover:scale-105"
                           />
                           <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
-                            <p className="font-display text-base/6 font-semibold tracking-wide text-white">
+                            <p className="text-base/2 font-display font-semibold  text-white">
                               {person.name}
                             </p>
                             <p className="mt-2 text-sm text-white">
@@ -169,6 +135,9 @@ function Team() {
                     </li>
                   ))}
                 </ul>
+              </div>
+              <div className="mt-10 flex items-center gap-x-8 lg:col-span-4 lg:ml-auto">
+                <Button href="/journeyv2">View More</Button>
               </div>
             </div>
           </FadeInStagger>
@@ -189,7 +158,7 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      {/* <PageIntro eyebrow="About us" title="Our strength is collaboration">
         <p>
           We believe that our strength lies in our collaborative approach, which
           puts our clients at the center of everything we do.
@@ -215,20 +184,18 @@ export default async function About() {
           <StatListItem value="52" label="Placated clients" />
           <StatListItem value="$25M" label="Invoices billed" />
         </StatList>
-      </Container>
+      </Container> */}
 
       <Culture />
 
-      <Team />
+      <Journey />
 
-      <PageLinks
+      {/* <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
         title="From the blog"
         intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
         pages={blogArticles}
-      />
-
-      <ContactSection />
+      /> */}
     </>
   )
 }

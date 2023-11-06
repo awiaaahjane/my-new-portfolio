@@ -7,28 +7,12 @@ import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
   {
-    title: 'Work',
+    title: 'Content',
     links: [
-      { title: 'TESDA', href: '/work/TESDA' },
-      { title: 'Presentation', href: '/work/Presentation' },
-      { title: 'Form', href: '/work/Form' },
-      {
-        title: (
-          <>
-            See all <span aria-hidden="true">&rarr;</span>
-          </>
-        ),
-        href: '/work',
-      },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
-      { title: 'About', href: '/about' },
+      { title: 'Certificates', href: '/certificates' },
+      { title: 'Journey', href: '/journeyv2' },
+      { title: 'Arts', href: '/arts' },
       { title: 'Projects', href: '/projects' },
-      { title: 'Blog', href: '/blog' },
-      { title: 'Contact us', href: '/contact' },
     ],
   },
   {
@@ -82,11 +66,10 @@ function NewsletterForm() {
   return (
     <form className="max-w-sm">
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-        Sign up for our newsletter
+        Sign up for my newsletter
       </h2>
       <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
+        Subscribe to get the latest news, articles, resources and inspiration.
       </p>
       <div className="relative mt-6">
         <input
@@ -122,10 +105,10 @@ export function Footer() {
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
-            <Logo className="h-8" fillOnHover />
+            <Logo className="h-6" />
           </Link>
           <p className="text-sm text-neutral-700">
-            © Studio Agency Inc. {new Date().getFullYear()}
+            © Aliah Jane Yu. {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

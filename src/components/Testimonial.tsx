@@ -33,8 +33,8 @@ export function Testimonial({
                 {children}
               </p>
             </blockquote>
-            <figcaption className="mt-10">
-              <Image src={client.logo} alt={client.name} unoptimized />
+            <figcaption className="mt-10 text-5xl tracking-tight text-neutral-950 sm:text-3xl">
+              <p>-John Mark Ramos</p>
             </figcaption>
           </figure>
         </FadeIn>
