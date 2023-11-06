@@ -17,7 +17,8 @@ const repo = 'my-new-portfolio'
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   basePath: `/${repo}/`,
-  assetPrefix: `/${repo}`
+  assetPrefix: `/${repo}`,
+  output: 'export',
 }
 
 function remarkMDXLayout(source, metaName) {
