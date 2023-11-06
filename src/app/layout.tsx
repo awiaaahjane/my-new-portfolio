@@ -9,7 +9,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: {
     template: '',
-    default: 'My Portfolio| ALI',
+    default: 'My Portfolio | ALI',
   },
 }
 

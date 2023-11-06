@@ -181,7 +181,7 @@ function Values() {
 }
 
 export const metadata: Metadata = {
-  description: 'My Portfolio| ALI!',
+  description: 'My Portfolio | ALI!',
 }
 
 export default async function Home() {
