@@ -114,7 +114,7 @@ function Presentation() {
         </p>
         <p>
           We created{' '}
-          <strong className="font-semibold text-neutral-950">"Stylez"</strong>{' '}
+          <strong className="font-semibold text-neutral-950">&quot;Stylez&quot;</strong>{' '}
           as a small clothing and apparel brand that specialized in trendy and
           fashion-forward clothing for both men and women. It successfully
           operated through both online and physical retail store channels.
