@@ -8,6 +8,8 @@ import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { loadArticles } from '@/lib/mdx'
 
+export const dynamic = 'force-static' // 'auto' | 'force-dynamic' | 'error' | 'force-static';
+
 export const metadata: Metadata = {
   title: 'My Journey',
   description: '',
