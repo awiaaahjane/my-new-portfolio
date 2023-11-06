@@ -16,7 +16,7 @@ const repo = 'my-new-portfolio'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
-  basePath: `/${repo}`,
+  // basePath: `/${repo}`,
   assetPrefix: `/${repo}`,
 }
 
