@@ -18,7 +18,6 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   basePath: `/${repo}`,
   assetPrefix: `/${repo}`,
-  output: 'export',
 }
 
 function remarkMDXLayout(source, metaName) {
