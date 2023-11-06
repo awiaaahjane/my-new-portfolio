@@ -1,6 +1,5 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
@@ -9,21 +8,12 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/TESDA/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
 import logoFormDark from '@/images/clients/Form/logo-dark.svg'
-import logoFormLight from '@/images/clients/Form/logo-light.svg'
-import logoPresentation from '@/images/clients/Presentation/logo-light.svg'
 import imageAliah from '@/images/aliah.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import { Button } from '@/components/Button'
 import { GridList, GridListItem } from '@/components/GridList'
 import { GridPattern } from '@/components/GridPattern'
-import Blog from './journeyv2/page'
 import Journey from './journey/page'
 function CaseStudies({
   caseStudies,
@@ -93,10 +83,11 @@ function AboutMe() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Technical Mastery">
-              I&apos;ve mastered diverse technical skills, excelling in programming
-              languages, development tools, and frameworks. This proficiency
-              empowers me to create efficient and scalable code, adapt to
-              various project needs, and embrace new technologies when required.
+              I&apos;ve mastered diverse technical skills, excelling in
+              programming languages, development tools, and frameworks. This
+              proficiency empowers me to create efficient and scalable code,
+              adapt to various project needs, and embrace new technologies when
+              required.
             </ListItem>
             <ListItem title="Innovative Problem Solver">
               My innovative problem-solving skills define me. I blend creativity
@@ -139,7 +130,7 @@ function Values() {
         title="Comprehensive Programming Skill Set"
       >
         <p>
-          I&apos;m a versatile programmer with expertise in multiple languages, web
+          I'm a versatile programmer with expertise in multiple languages, web
           development, front-end technologies, database management, and strong
           problem-solving skills.
         </p>
@@ -201,8 +192,8 @@ export default async function Home() {
             Discover my amazing Portfolio!
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            I&apos;m a web developer with a flair for creative design and coding
-            expertise. Together, let&apos;s transform your ideas into stunning online
+            I'm a web developer with a flair for creative design and coding
+            expertise. Together, let's transform your ideas into stunning online
             experiences.
           </p>
         </FadeIn>
