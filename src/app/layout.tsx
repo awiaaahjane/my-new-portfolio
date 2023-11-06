@@ -4,6 +4,8 @@ import { RootLayout } from '@/components/RootLayout'
 
 import '@/styles/tailwind.css'
 
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: {
     template: '',

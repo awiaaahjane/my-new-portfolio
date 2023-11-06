@@ -15,6 +15,9 @@ import { Button } from '@/components/Button'
 import { GridList, GridListItem } from '@/components/GridList'
 import { GridPattern } from '@/components/GridPattern'
 import Journey from './journey/page'
+
+export const dynamic = 'force-static'
+
 function CaseStudies({
   caseStudies,
 }: {
