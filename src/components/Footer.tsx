@@ -4,6 +4,8 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
 import { socialMediaProfiles } from '@/components/SocialMedia'
+import emailjs from '@emailjs/browser'
+import { useRef } from 'react'
 
 const navigation = [
   {
@@ -63,8 +65,32 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 function NewsletterForm() {
+  let ref = useRef<React.ElementRef<'form'>>(null)
+  const sendForm = (e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'service_jfu063j',
+        'template_vys7kkg',
+        e.currentTarget,
+        'UhpxzLZsmzGCMsr2F',
+      )
+      .then(
+        () => {
+          alert(
+            'Thank you for subscribing! Please check your email for confirmation.',
+          )
+          ref.current?.reset()
+        },
+        (error) => {
+          alert('An error has occured. Please try again.')
+          console.log(error.text)
+        },
+      )
+  }
   return (
-    <form className="max-w-sm">
+    <form ref={ref} className="max-w-sm" onSubmit={sendForm}>
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
         Sign up for my newsletter
       </h2>
@@ -74,6 +100,7 @@ function NewsletterForm() {
       <div className="relative mt-6">
         <input
           type="email"
+          name="to_email"
           placeholder="Email address"
           autoComplete="email"
           aria-label="Email address"

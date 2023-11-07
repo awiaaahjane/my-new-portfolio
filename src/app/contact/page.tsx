@@ -1,4 +1,6 @@
-import { useId } from 'react'
+'use client'
+
+import { useId, useRef } from 'react'
 import { type Metadata } from 'next'
 import Link from 'next/link'
 
@@ -9,6 +11,7 @@ import { FadeIn } from '@/components/FadeIn'
 import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
+import emailjs from '@emailjs/browser'
 
 function TextInput({
   label,
@@ -52,27 +55,56 @@ function RadioInput({
 }
 
 function ContactForm() {
+  let ref = useRef<React.ElementRef<'form'>>(null)
+
+  const sendForm = (e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'service_jfu063j',
+        'template_ozqr9ss',
+        e.currentTarget,
+        'UhpxzLZsmzGCMsr2F',
+      )
+      .then(
+        () => {
+          alert('Thank you! Please check your email for my response.')
+          ref.current?.reset()
+        },
+        (error) => {
+          alert('An error has occured. Please try again.')
+          console.log(error.text)
+        },
+      )
+  }
+
   return (
     <FadeIn className="lg:order-last">
-      <form>
+      <form ref={ref} onSubmit={sendForm}>
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Work inquiries
         </h2>
         <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
-          <TextInput label="Name" name="name" autoComplete="name" />
+          <TextInput label="Name" name="to_name" autoComplete="name" />
           <TextInput
             label="Email"
             type="email"
-            name="email"
+            name="to_email"
             autoComplete="email"
           />
           <TextInput
             label="Company"
-            name="company"
+            name="to_company"
             autoComplete="organization"
           />
-          <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
-          <TextInput label="Message" name="message" />
+          <TextInput
+            label="Phone"
+            type="tel"
+            name="to_phone"
+            autoComplete="tel"
+          />
+          <TextInput label="Message" name="to_message" />
         </div>
         <Button type="submit" className="mt-10">
           Let’s work together
