@@ -161,10 +161,10 @@ function ContactDetails() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'Contact Me',
-  description: 'Let’s work together. I can’t wait to hear from you.',
-}
+// export const metadata: Metadata = {
+//   title: 'Contact Me',
+//   description: 'Let’s work together. I can’t wait to hear from you.',
+// }
 
 export default function Contact() {
   return (
